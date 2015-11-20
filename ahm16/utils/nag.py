@@ -19,8 +19,9 @@ from validate import (
     )
 
 # Ugly hack: only ever write utf-8 to stdout, especially if it is a pipe with no encoding set.
+# Uncomment this if you get unicode errors on print.
 # Better solution: port to python3.
-sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
+#sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
 
 class Options(optparse.OptionParser):
     
